@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       body {
+            font-family: 'Georgia', sans-serif;
+            font-size: 1.8em;
+            margin: 0;
+            padding: 0;
+            background-image: url('l.gif'); /* Specify your background image path */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-color: #f7f0f5; /* Fallback color */
+            color: #312031;
+			text-shadow: -1px -1px 0 #ffffff,  
+                          1px -1px 0 #ffffff,
+                         -1px  1px 0 #ffffff,
+                          1px  1px 0 #ffffff; /* Pink stroke */
+            transition: all 0.3s ease; /* Adding transition for title */
+        }
+        input[type="text"],
+        input[type="number"],
+        input[type="submit"] {
+            height: 40px;
+            width: 300px;
+            font-size: 1.2em;
+            border-radius: 20px;
+            border: 1px solid #e4c1db;
+            padding: 0 15px;
+            margin-bottom: 10px;
+            background-color: #fff;
+            color: #333;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: all 0.3s ease; /* Adding transition for input fields */
+        }
+        input[type="submit"] {
+            background-color: #ff4d6d;
+            color: #fff;
+            cursor: pointer;
+        }
+        table {
+            width: 100%;
+            max-width: 500px;
+            margin: 20px auto;
+            border: 1px solid #e4c1db;
+            border-collapse: collapse;
+            background-color: #fff;
+            transition: all 0.3s ease; /* Adding transition for table */
+        }
+        th, td {
+            border: 1px solid #e4c1db;
+            padding: 10px;
+            text-align: center;
+        }
+        .tablesSection {
+            margin-top: 20px;
+            display: none;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            transition: all 0.3s ease; /* Adding transition for table section */
+        }
+        .setVisibility {
+            margin-top: 10px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease; /* Adding transition for visibility */
+        }
+        .setVisibility input[type="checkbox"] {
+            margin-left: 10px;
+            transform: scale(2);
+            transition: transform 0.3s ease; /* Adding transition for checkbox */
+        }
+        .title {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            font-size: 2em;
+            color: #fff; /* White color */
+            text-shadow: -1px -1px 0 #ff4d6d,  
+                          1px -1px 0 #ff4d6d,
+                         -1px  1px 0 #ff4d6d,
+                          1px  1px 0 #ff4d6d; /* Pink stroke */
+            transition: all 0.3s ease; /* Adding transition for title */
+        }
+        th {
+            background-color: #e5ccff; /* Light purple color */
+            color: #333; /* Text color */
+            transition: background-color 0.3s ease, color 0.3s ease; /* Adding transitions */
+        }
+
+        .tablesSection th {
+            background-color: #e5ccff; /* Light purple color */
+            color: #333; /* Text color */
+            transition: background-color 0.3s ease, color 0.3s ease; /* Adding transitions */
+        }
+    </style>
+</head>
+<body>
+    <h2 style="text-align: center;">Inventory System</h2>
+    <form action="#" id="inputForm" style="text-align: center;">
+        <p id="usersList"></p>
+        <p>Item: <input type="text" id="item"></p>
+        <p>Quantity: <input type="number" id="quantity"></p>
+        <input type="submit" value="Submit" id="submitButton">
+    </form>
+    <div class="setVisibility">
+        <p>View table (Check the box) <input type="checkbox" id="checkbox"></p>
+    </div>
+    <div class="tablesSection">
+        <table>
+            <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+            </tr>
+        </table>
+    </div>
+    <form id="editForm" style="display: none;">
+        <input type="text" id="newText"/>
+        <input type="submit">
+    </form>
+    <script src="app.js"></script>
+</body>
+</html>
